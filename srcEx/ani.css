@@ -1,0 +1,82 @@
+body,code { 
+    margin:0;
+    height: 2000px;
+    font-size:1.5rem;font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', 'AppleGothic', 'Apple SD Gothic Neo',sans-serif; 
+    color:#353535; background:#fff; }
+
+
+section{ 
+   height: 100%;   
+   background:   
+    url('https://aulabs.cafe24.com/images/nanogold.png') fixed;    
+   background-size: cover;
+   top:0;
+   left:0;
+   right: 0;
+   bottom: 0;
+   background-position: center;   
+   position: absolute;
+}
+
+.photo{
+    position: relative;
+    top:250px;     
+    width: 70%;
+    text-align: center;   
+}
+
+h1{
+    font-size: 2em;
+    /*font 너비*/
+    width: 258px;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    animation: kslide 1s ease-out;
+}
+h3{
+    font-size: 1.5em;
+    width: 258px;
+    color: #fff;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    animation: kslide 1s ease-out;
+
+}
+
+
+/* 브라우져 가로 1024픽셀 이하일경우 반응*/
+@media screen and (max-width: 1024px) {
+
+    /* about w */
+    h1 {font-size:2rem;}
+    .photo{        
+        top:200px;
+        text-align: center; 
+        width: 95%;   
+    }
+    
+}   
+@keyframes kslide{
+from{
+    left: -100px;
+    opacity: 0;
+}
+to{
+    left:200px;
+    opacity: 1;
+}
+}
+@keyframes disappear {
+    from{
+        left:200px;
+        opacity: 1;
+    }
+    to{
+        left:100px;
+        opacity: 0;
+    }
+}

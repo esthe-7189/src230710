@@ -1,0 +1,8 @@
+body,code { 
+    font-size:1.5rem;font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', 'AppleGothic', 'Apple SD Gothic Neo',sans-serif; 
+    color:#353535; background:#fff; }
+
+    /**아래 폰트 영향중 예:1em 이면 20px    **/
+    @media all and (max-width: 750px) {
+        .title { font-size: 20px ; } // 이제 .title 아래에 있는 모든 em 단위가 영향을 받습니다.
+      }

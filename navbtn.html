@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-gb"><head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="format-detection" content="telephone=no" />
+    
+   
+   <meta charset="utf-8" />
+	
+<style>
+
+/* GENERAL STYLES  - NOT NEEDED*/
+
+body {
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+	padding: 0 10px;
+}
+h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+h1 + p {
+	text-align: center;
+}
+/*
+h1 + p a, .redly {
+    background: #b93232;
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto 22px auto;
+    width: 140px;
+    text-align: center;
+    padding: 6px 14px 8px 14px;
+    border-radius: 3px;
+}
+*/
+/*
+.redly.wider {
+    width: 75%;
+    background: #000;
+}
+
+
+.over {
+    display: inherit;
+    position: relative;
+    z-index: 5;
+    background: #000;
+    padding: 20px 0 20px 0;
+}
+*/
+/* NEEDED STYLES */
+label {
+    display: block;    
+	padding: 8px 22px;
+    margin: 0 0 1px 0;
+	cursor: pointer;
+	background: #000;
+	border-radius: 3px;
+	color: #FFF;
+	transition: ease .5s;
+	position: relative;
+	z-index:1;
+}
+label:hover {
+	background: #a084ca;
+}
+
+label:after {
+    content: '+';
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+input:checked + label:after {
+    content: '-';
+    font-size: 22px;
+    right: 14px;
+    top: 3px;
+}
+
+.content {
+    background: #E2E5F6;
+    padding: 10px 25px;
+    border: 1px solid #A7A7A7;
+	margin: 0 0 1px 0;
+	border-radius: 3px;
+}
+
+input + label + .content {
+	transition: ease .5s;
+	height: 0;
+	font-size: 0;
+	padding: 0 25px;
+	opacity: 0;
+}
+
+input:checked + label + .content {
+	height: 120px;
+	font-size: 14px;
+	padding: 10px 25px;
+	opacity: 1;
+}
+
+input {
+	display: none;
+}
+
+.demo {
+    border: 1px solid #ababab;
+    padding: 30px 14px 30px 14px;
+    width: 82%;
+    margin: 0 auto;
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<div class="tabs demo">
+
+    <input type="checkbox" id="title1" />
+    <label for="title1">Accordion One </label>
+    
+    <div class="content">222
+    
+    </div>
+    
+    <input type="checkbox" id="title2" />
+    <label for="title2">Accordion Two </label>
+    
+    <div class="content">
+        <ul>
+            <li>aaaaa</li>
+            <li>aaaaa</li>
+            <li>aaaaa</li>
+        </ul>
+    </div>
+    
+    <input type="checkbox" id="title3" />
+    <label for="title3">Accordion Three </label>
+    
+    <div class="content">
+        <ul>
+            <li>aaaaa</li>
+            <li>aaaaa</li>
+            <li>aaaaa</li>
+        </ul>
+    </div>
+
+</div>
+
+<h2>For more pure CSS demos visit links below</h2>
+<!--
+<p><a class="redly wider" href="https://supfort.com/demo/pure-css-accordion-no-javascript/">Pure CSS accordion with no signs</a></p>
+
+<p><a class="redly wider" href="https://supfort.com/demo/pure-css-accordion-plus-minus-signs/">Pure CSS accordion with plus and minus signs</a></p>
+-->
+<p><a class="redly wider" href="https://supfort.com/demo/font-awesome-arrows-css-accordion/">Pure CSS accordion with Font Awesome arrows</a></p>
+
+<!--<p><a class="redly" href="https://supfort.com/">Website Help?</a></p>-->
+
+
+
+</body>
+</html>
+
+
+
+

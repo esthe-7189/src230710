@@ -1,0 +1,35 @@
+/**가로 세로 조절**/
+.vmin {
+    width: 80vmin;
+    height: 80vmin;
+    color: #fff;
+    background: crimson;
+  }
+  
+.vw {
+    width: 80vw;
+    height: 80vw;
+    color: #fff;
+    background: darkorchid;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Share:wght@700&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  div {
+    padding: 3px;
+    font-family: 'Share', cursive;
+    line-height: 124%;
+    font-size: 8vmin;
+  }

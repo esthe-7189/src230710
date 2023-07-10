@@ -1,0 +1,116 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+<!--구글폰트 사용-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,700,900&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+.text { line-height:1.4em;font-weight:300;z-index:99999;position:relative; word-break:keep-all;} 
+    <div class="contaner">        
+        <!----h1 을 클라스로 사용--->
+        <p class="h1">h1. Bootstrap heading</p>
+        <p class="h2">h2. Bootstrap heading</p>
+        <p class="h3">h3. Bootstrap heading</p>
+        <p class="h4">h4. Bootstrap heading</p>
+        <p class="h5">h5. Bootstrap heading</p>
+        <p class="h6">h6. Bootstrap heading</p>
+    
+
+    <!----흐린 텍스트--->
+    <h3>
+        Fancy display heading
+        <small class="text-muted">With faded secondary text</small>
+    </h3>
+
+    <!----제목폰트--->
+    <h1 class="display-1">Display 1</h1>
+    <h1 class="display-2">Display 2</h1>
+    <h1 class="display-3">Display 3</h1>
+    <h1 class="display-4">Display 4</h1>
+    <h1 class="display-5">Display 5</h1>
+    <h1 class="display-6">Display 6</h1>
+
+    <!----단락--->
+    <p class="lead">
+        This is a lead paragraph. It stands out from regular paragraphs.
+    </p>
+
+    <!----text 위치  / 부가 설명--->
+    <figure class="text-end">
+        <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+    </figure>
+
+    <!---가로 리스트 : 가로 사이에 약간의 마진--->
+    <ul class="list-inline">
+        <li class="list-inline-item">This is a list item.</li>
+        <li class="list-inline-item">And another one.</li>
+        <li class="list-inline-item">But they're displayed inline.</li>
+      </ul>
+
+      <!---리스트 : 줄없는--->
+      <ul class="list-unstyled">
+        <li>This is a list.</li>
+        <li>It appears completely unstyled.</li>
+        <li>Structurally, it's still a list.</li>
+        <li>However, this style only applies to immediate child elements.</li>
+        <li>Nested lists:
+          <ul>
+            <li>are unaffected by this style</li>
+            <li>will still show a bullet</li>
+            <li>and have appropriate left margin</li>
+          </ul>
+        </li>
+        <li>This may still come in handy in some situations.</li>
+      </ul>
+
+<!---텍스트 자간사이--->
+<p class="normal">letter spacing</p>
+<p class="em-wide">letter spacing</p>
+<p class="em-wider">letter spacing</p>
+<p class="em-tight">letter spacing</p>
+<p class="px-wide">letter spacing</p>
+
+<!---css 텍스트 줄 간격--->
+.normal {
+    font-size: 12px;
+    line-height: normal;
+  }
+  
+  .number {
+    font-size: 12px;
+    line-height: 2.1;
+  }
+  
+  .percentage {
+    font-size: 12px;
+    line-height: 210%;
+  }
+
+
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,676 @@
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Carousel Template · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.kr/docs/5.2/examples/carousel/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+     
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+
+        }
+
+        .bd-placeholder2-img {
+            position: absolute;
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            height: 0px;
+
+        }
+
+        /**768 이상일때**/
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+            .bd-placeholder2-img {
+                position: relative;
+                height: 100%;
+            }
+        }
+
+        .card-shadow {
+            border-radius: 50%;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            width: 400px;
+            height: 500px;
+            cursor: pointer;
+            transition: box-shadow 0.1s linear;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-shadow {
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            width: 300px;
+            height: 50px;
+            cursor: pointer;
+            transition: box-shadow 0.1s linear;
+        }
+
+        .item-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .ul-img {
+            list-style: none;
+            text-align: start;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .cer-line {
+            width: 5%;
+            height: 10px;
+            left: 50%;
+            margin: 15px 0px 15px 0px;
+            border-bottom: 3px solid #000;
+        }
+
+        /**나노 테이블**/
+        .bg-pur {
+            background-color: #a084ca;
+        }
+
+        .ft1 {
+            font-size: 1rem;
+        }
+
+        .ft1-1 {
+            font-size: 1.1rem;
+        }
+
+        .line-t {
+            border-top: 2px solid #a084ca;
+        }
+
+        .line-b {
+            border-bottom: 2px solid #a084ca;
+        }
+
+        .v-a {
+            vertical-align: middle;
+        }
+
+        .ft-white {
+            color: #ffffff;
+        }
+
+        /* 브라우져 가로 1024픽셀 이하일경우 반응*/
+        @media screen and (max-width: 1024px) {
+
+            #ft1 {
+                font-size: 0.8rem;
+            }
+
+            #ft1-1 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--   
+
+    <div class="container"></div>
+    <p><span style="font-size: 36px; color: rgb(85, 85, 85);">NiacinGold&trade;<br>활용방안<br>및 기대효과</span></p>
+
+    <ul>
+        <li><span style="font-size: 15px; color: rgb(85, 85, 85);">안정화된 콜로이드 골드 및 효능 자료를 통한&nbsp;</span><span
+                style="font-size: 15px;"><span style="color: rgb(85, 85, 85);">실질적 효능이 있는 골드 화장품 기대</span></span></li>
+        <li><span style="font-size: 15px;"><span style="color: rgb(85, 85, 85);">단순한 화장품이 아닌 즉각적으로 보여지는 쇼잉이 트렌드인 세대에서,
+                    디바이스 시장 공략 가능성</span>
+                <br>
+            </span><span style="font-size: 15px; color: rgb(85, 85, 85);">(데이터 입증)</span></li>
+    </ul>
+    </div>
+-->
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">Punny headline</h1>
+      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>      
+
+      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/niacingold_top_01.jpg">
+</div>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">Punny headline</h1>
+      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>      
+
+      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/niacingold_top_02.jpg">
+</div> 
+
+
+
+    <div class="text-center mb-2 p-5">
+        <h1 class="display-6"><b>나이아신골드&trade; 란?</b></h1>
+        <p style="font-size: 1.5rem; margin-bottom:10px ;" class="text-muted">NiacinGold&trade;</p>
+
+        <!--<div class="cer-line"></div> -->
+        <p>
+            특허받은 나노화 공법으로 나노화된 금 입자를 비타민 B3의 일종인 파우더(미세한 가루) 형태의 <br>
+            나이아신아마이드에 증착시킨 후 자사의 독자적인 가공공법을 사용하여 개발한 소재로 피부 개선에 <br>
+            높은 효과를 나타내는 고기능성 화장품 원료입니다.
+        </p>
+    </div>
+
+
+    <div id="myCarousel" class="carousel slide mb-2 p-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#362e41" />
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption ">
+                        <h1>나이아신골드&trade; </h1>
+                        <p>Materials developed by patented nanonization method</p>
+                        <p style="width:100%;">
+                            <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/niacingold_top_01.jpg">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#362e41" />
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>파장 및 입자 비교</h1>
+                        <p>Some representative placeholder content for the second slide of the carousel.</p>
+                        <p style="width:100%;"><img
+                                src="https://aulabs.cafe24.com/skin-skin5/images/niacin/niacingold_top_02.jpg"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#362e41" />
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>One more for good measure.</h1>
+                        <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        <p><img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/niacingold_top_01.jpg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="text-center mb-2 p-5">
+        <h1 class="display-6"><b>나이아신골드&trade; 파장 비교</b></h1>
+        <p style="font-size: 1.5rem;" class="text-muted">NiacinGold&trade; EFFICACY </p>
+        <p>
+            피부치료의 효과를 높여주는 모든 물질의 흡수는 작을수록 피부 내 흡수가 용이하고 <br>
+            모양에 따라 피부에 미치는 영향이 크기 때문에  그 분자량을 얼마나 작게 만드는가가 관건입니다. <br>
+            다음은 미세한 가루 입자의 금나노 입자와 일반 입자의 파장을 비교한 데이터입니다. 
+
+        </p>
+    </div>
+
+    <div class="container text-center marketing mb-5 p-5 "> 
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/one1.jpg" >
+                <title>금나노 입자</title>
+                <h4 class="fw-normal">금나노 입자</h4>
+                <h6 class="fw-normal">균일한 에너지 전달로 피부에 자극이나 손상없음</h6>
+                <p>안정화된 둥근 모양의 입자로 파장을 줬을 때 균일하게 에너지가 작용 </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/one2.jpg" >
+                <title>타 입자</title>
+                <h4 class="fw-normal">타 입자</h4>
+                <h6 class="fw-normal">균일하지 않은 에너지 전달로 피부에 자극이나 손상을 줌</h6>
+                <p>불규칙한 모양의 입자로 파장을 줬을 때 균일하지 않게 에너지가 작용 </p>
+            </div>       
+        </div>
+
+
+        <div class="text-center mt-5 mb-2 p-5">
+            <h1 class="display-6"><b>나이아신골드&trade; 효능</b></h1>
+            <p style="font-size: 1.5rem;" class="text-muted">NiacinGold&trade; EFFICACY </p>  
+            <p>
+                특허받은 나노화 공법으로 나노화된 금 입자를 비타민 B3의 일종인 파우더(미세한 가루) 형태의 <br>
+                나이아신아마이드에 증착시킨 후 자사의 독자적인 가공공법을 사용하여 개발한 소재로 피부 개선에 <br>
+                높은 효과를 나타내는 고기능성 화장품 원료입니다.
+            </p>
+        </div>
+
+        <hr class="featurette-divider ">
+        <div class="row featurette ">
+            <div class="col-md-10">
+                <h2 class="featurette-heading fw-normal lh-1 pb-3">SKINCARE </h2>
+                <p class="lead">
+                <ul class="ul-img">
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(160,132,202,0.1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_skin_1.png" width="80px">
+                        항산화 작용으로 인한 노화방지 효과
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(160,132,202,0.1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_skin_2.png" width="80px">
+                        미네랄 성분으로 인한 건강한 모발 성장 유도
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(160,132,202,0.1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_skin_3.png" width="80px">
+                        세포 생성 촉진을 통한 손상된 조직 치유 효과
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(160,132,202,0.1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_skin_4.png" width="80px">
+                        항균 특성을 통한 유해균 차단 효과
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(160,132,202,0.1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_skin_5.png" width="80px">
+                        광열작용으로 뷰티 디바이스 사용 시 시너지 효과
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div class="col-md-2">
+                <svg class="bd-placeholder2-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100%"
+                    height="550" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 100%x550"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="rgba(160,132,202,0.1)" /><text x="50%" y="50%"
+                        fill="rgba(160,132,202,0.3)" dy=".5em">SKIN</text>
+                </svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-10 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1 pb-3">DRUG & MEDICAL</h2>
+                <p class="lead">
+                <ul class="ul-img ">
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(238,247,255,1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_drug_1.png" width="80px">
+                        세포 생성 촉진을 통한 손상된 조직 치유 효과
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(238,247,255,1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_drug_2.png" width="80px">
+                        항염 특성을 이용한 통증완화 효과
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(238,247,255,1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_drug_3.png" width="80px">
+                        자연적으로 인체에 생성되는 금을 부스팅하여 전기신호 전달에 도움을 주어 기억력 증진 효과
+                    </li>
+                    <li class="mb-2 p-1"
+                        style="background-color: rgb(238,247,255,1);border-radius: 50px 50px 50px 50px;">
+                        <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_drug_4.png" width="80px">
+                        기타 에너지부스트, 분자 방향성 연구를 활용한 코로나 치료제 연구 등 다양한 방면에서 활용
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div class="col-md-2 order-md-1">
+                <svg class="bd-placeholder2-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100%"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 100%x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="rgba(238,247,255,1)" /><text x="50%" y="50%"
+                        fill="rgba(160,132,202,0.3)" dy=".5em">DRUG </text>
+                </svg>
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
+
+
+    <div class="text-center mb-5 p-5">
+        <h1 class="display-6"><b>특허 공법</b></h1>
+        <p style="font-size: 1.5rem;" class="text-muted">
+            Patented Method
+        </p>
+
+        <!--<div class="cer-line"></div> -->
+        <p>
+            자사만이 특허받은 친환경 건식 나노화 공법으로 진공에서 금속 스퍼터와 아르곤 가스를 주입,<br>
+            플라즈마를 발생시켜 튕겨져 나가는 나노 입자를 교반하는 Carrier Powder 위에 금을 증착하여 소재를 얻는 공법
+        </p>
+    </div>
+    <!--grid pc & mobile-->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 bg-light pt-2">
+                <p><img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_cer.png" width="120px"></p>
+                <h5>세계 최초 나노화 공법 특허</h5>
+                <p><img src="https://cdn.imweb.me/upload/S2023041603494e87504cd/fd2f3b183dec9.png" width="100%"></p>
+            </div>
+            <div class="col-md-8 col-sm-12 border pt-2">
+                <p><img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/icon_7.png" width="120px"></p>
+                <h5>친환경 건식 나노화 공법</h5>
+                <p><img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/method.png" width="100%"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="text-center mb-2 mt-5 p-5 ">
+        <h1 class="display-6"><b>특허증</b></h1>
+        <p style="font-size: 1.5rem;" class="text-muted">Certificate of patent</p>
+
+        <!--<div class="cer-line"></div> -->
+        <p>
+            고객의 아름다움과 건강한 삶을 위해 끊임없는 도전과<br>
+            변함없는 열정으로 오랜 연구끝에 에이유랩스가 자체 개발한 항노화 특허증
+        </p>
+    </div>
+    <div class="container text-center bg-light mb-5 p-5">
+        <div class="row mb-5">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 ">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            나노입자 제조용 진공 교반기<br>
+                            특허 : 제 10-2347234호<br>
+                            출원번호 : 제 10-2021-0129451호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            금 입자가 함유된 나이아신아마이드 분말의 콜로이드 용액 제조방법<br>
+                            특허 : 제 10-2515749호<br>
+                            출원번호 : 제 10-2022-0086033호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            금입자가 함유된 나이아신아마이드 분말의 제조방법<br>
+                            특허 : 제 10-2478642호<br>
+                            출원번호 : 제 10-2022-0046050호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            나노입자가 증착된 나이아신아마이드를 포함하는 항산화 조성물의 제조방법<br>
+                            특허 : 제 10-2445952호<br>
+                            출원번호 : 제 10-2022-0041540호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            나노입자가 증착된 나이아신아마이드를 포함하는 주름개선용 조성물의 제조방법<br>
+                            특허 : 제 10-2445953호<br>
+                            출원번호 : 제 10-2022-0041541호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            나노입자가 증착된 나이아신아마이드를 포함하는 미백개선용 조성물의 제조방법<br>
+                            특허 : 제 10-2445954호<br>
+                            출원번호 : 제 10-2022-0041542호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            나노입자가 증착된 나이아신아마이드를 포함하는 피부재생용 조성물의 제조방법<br>
+                            특허 : 제 10-2445955호<br>
+                            출원번호 : 제 10-2022-0041543호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div class="card card-shadow" style="width: 18rem;">
+                    <img src="https://aulabs.cafe24.com/skin-skin5/images/niacin/certificate_1.jpg"
+                        class="card-img-top border" alt="에이유토닝 특허증">
+                    <div class="card-body bg-light">
+                        <p class="card-text" style="font-size:0.8em;">
+                            나노입자가 증착된 나이아신아마이드를 포함하는 조성물의 제조방법<br>
+                            특허 : 제 10-2445951호<br>
+                            출원번호 : 제 10-2022-0041539호
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mb-2 p-5">
+        <h1 class="display-6"><b>제조공법 비교</b></h1>
+        <p style="font-size: 1.5rem;" class="text-muted">Manufacturing Method Comparison</p>
+
+        <!--<div class="cer-line"></div> -->
+        <p>
+            타사의 습식/레이저공법과 에이유랩스만의 특수 공법을 비교해보세요
+        </p>
+    </div>
+
+    <div class="container text-left mb-5 p-5">
+
+        <div class="row mb-0 ft1-1 line-t">
+            <div class="col-1 border pt-2 pb-2">.</div>
+            <div class="col-3 border pt-2 pb-2">
+                습식공법<br>
+                METHOD
+            </div>
+            <div class="col-4 border pt-2 pb-2 ">
+                레이저공법<br>
+                PHYSICAL METHOD
+            </div>
+            <div class="col-4 border pt-2 pb-2 bg-pur ft-white">
+                물리적진공나노기술<br>
+                PHYSICAL VACUUM NANO TECH
+            </div>
+        </div>
+        <div class="row mb-0 ft1 ">
+            <div class="col-1 border pt-2 pb-2">제조방식</div>
+            <div class="col-3 border pt-2 pb-2">강산 혹은 용제를 이용하여 골드를 녹인 후, 용제를 처리하여 얻어냄</div>
+            <div class="col-4 border pt-2 pb-2">골드를 용매(물, 에탄올 등)에 침전 시킨 후 레이저를 절제하여 금속 입자를 나노화시킴</div>
+            <div class="col-4 border bg-pur ft-white pt-2 pb-2">자사만의 특수 공법으로 진공에서 금속을 플라즈마 상태로 만들고, 이 과정에서 튕겨져 나가는 나노
+                입자를 교반하는 Carrier Powder 위에 증착하여 혼합된 소재를 얻는 공법</div>
+        </div>
+        <div class="row mb-0 ft1 ">
+            <div class="col-1 border pt-2 pb-2">순도</div>
+            <div class="col-3 border pt-2 pb-2">
+                <ul>
+                    <li>불순물 처리에 따른 순도</li>
+                    <li>매 Lot 마다 순도 불분명</li>
+                </ul>
+
+            </div>
+            <div class="col-4 border pt-2 pb-2">
+                습식 공법보다 순도는 높지만 빛의 간섭으로 인해 미처 나노화되지 못한 입자가
+                존재 할 수 있음
+            </div>
+            <div class="col-4 border pt-2 pb-2 bg-pur ft-white">
+                순도 99.99% 일정
+            </div>
+        </div>
+        <div class="row mb-0 ft1 ">
+            <div class="col-1 border pt-2 pb-2">독성 및 안전성</div>
+            <div class="col-3 border pt-2 pb-2">강산 혹은 유기용제의 처리 불확실성으로 인해 독성, 안전성 불분명함</div>
+            <div class="col-4 border pt-2 pb-2">독성없음 / 안전</div>
+            <div class="col-4 border pt-2 pb-2 bg-pur ft-white">독성없음 / 안전</div>
+        </div>
+        <div class="row mb-0 ft1 ">
+            <div class="col-1 border pt-2 pb-2">환경성</div>
+            <div class="col-3 border pt-2 pb-2">처리 후 남은 폐기물 발생으로 악영향</div>
+            <div class="col-4 border pt-2 pb-2">폐기물 발생 X</div>
+            <div class="col-4 border pt-2 pb-2 bg-pur ft-white">폐기물 발생 X</div>
+        </div>
+        <div class="row mb-0 ft1 ">
+            <div class="col-1 border pt-2 pb-2">장점</div>
+            <div class="col-3 border pt-2 pb-2">가장 많이 진행된 공법으로 접근이 쉬움</div>
+            <div class="col-4 border pt-2 pb-2">
+                <ul>
+                    <li>금속, 용매제, 장비만 있으면 제조 가능 </li>
+                    <li>다양한 금속에 적용 가능 </li>
+                </ul>
+            </div>
+            <div class="col-4 border pt-2 pb-2 bg-pur ft-white">
+                <ul>
+                    <li>금속, 용매제, 장비만 있으면 제조 가능</li>
+                    <li>대량생산에 특화</li>
+                    <li>순도 일정</li>
+                    <li>고농도의 콜로이드화 가능</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="row mb-0 ft1 line-b">
+            <div class="col-1 border pt-2 pb-2">단점</div>
+            <div class="col-3 border pt-2 pb-2">
+                <ul>
+                    <li>일반적으로 잔류 부산물,
+                        리간드 및 환원제에 의한 독성 유발</li>
+                    <li>양이온성 계면활성제에 의해
+                        DNA 손상</li>
+                    <li>AuNP-고분자 복합체의 장기간 노출 후에 독성 물질 범출로부터 완전한
+                        보호 어려움</li>
+                </ul>
+
+            </div>
+            <div class="col-4 border pt-2 pb-2">
+                <ul>
+                    <li>레이저 파장, 강도, 시간 등 변수의 영향을 상당히 많이 받음</li>
+                    <li>고농도의 콜로이드액상 제조가 힘듦 (농도가 높아 색상이 진해지면 레이저가 빛의 방해로 금속 까지 도달하지 못함)</li>
+                    <li>대량생산 진행 시 고가의 장비가 필요</li>
+                </ul>
+
+            </div>
+            <div class="col-4 border pt-2 pb-2 bg-pur ft-white">
+                금속 변경 혹은 증착제 변경 시 조건 설정 및
+                가능성 여부 확인 필요
+            </div>
+        </div>
+    </div>
+
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+
+
+.themed-grid-col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(0, 0, 0, .2);
+    border: 1px solid rgba(112.520718, 44.062154, 249.437846, .1);
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .themed-container {
+    padding: .75rem;
+    margin-bottom: 0.1rem;
+    background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+    border: 1px solid rgba(245, 244, 249, 0.3);    
+  }
+    
+  .grid-col-color-p{
+    background-color: #370759;
+    color: #ffffff;
+    border: #e4e4e4;
+   }
+   .grid-col-color-w{
+    background-color:#ebc7e8;
+    color: #000;
+    border: 1px solid #e4e4e4;
+   }
+   .font_title_grid{
+    font-size: large;
+    font-weight: bold;
+    vertical-align: middle;
+   }
+
+   /**나노 테이블**/
+.bg-pur{
+  background-color: #a084ca;
+}
+.ft1{
+  font-size: 1rem; 
+}
+.ft1-1{
+  font-size: 1.1rem;
+}
+.line-t{   
+  border-top: 2px solid #a084ca;
+}
+.line-b{   
+  border-bottom: 2px solid #a084ca;
+}
+.v-a{  
+  vertical-align: middle;
+}
+.ft-white{
+  color: #ffffff; 
+}
+
+/* 브라우져 가로 1024픽셀 이하일경우 반응*/
+@media screen and (max-width: 1024px) {
+  
+  #ft1 {font-size:0.8rem;}
+  #ft1-1 {font-size:1rem;}
+} 
+
+
+
+
+
+
+   /***테이블에 사용****/
+/*
+.title-align {    
+  text-align: center;
+  font-size: 1.05em;
+  font-family: sans-serif;  
+  line-height: 2;
+  }
+
+  .table-align {
+  text-align: center;
+  font-family: sans-serif;
+  vertical-align: middle;  
+  padding: 5px 10px 5px 10px ;
+  line-height: 1.5; 
+  }
+
+  .line-1{
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .line-2-top{
+    text-align: center;
+    vertical-align: middle; 
+    border-top: 2px solid #370759;
+    background-color: #e4e4e4;
+  }
+  .line-2-bottom{
+    border-bottom: 2px solid #370759;
+  }
+  .font-w-b{
+    font-weight: 700;
+    color: #370759;
+  }
+  .td-center{
+    text-align: center;
+  }
+  
+*/
+
+
+ 

@@ -1,0 +1,103 @@
+/*bootstrap grid 관련
+row 사이즈
+https://getbootstrap.com/docs/5.3/utilities/spacing/
+
+그리드 시스템은 4개의 class(클래스)
+
+◎ xs : 스마트폰용. 화면 넓이가 768px보다 작을 때.
+◎ sm : 테블릿PC용. 화면 넓이가 768px보다 크거나 같을 때.
+◎ md : 작은 노트북. 화면 넓이가 992px보다 크거나 같을 때.
+◎ lg : 일반 노트북 및 데스크탑PC. 화면 넓이가 1200px보다 크거나 같을 때
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12"></div>
+    </div>
+</div>
+
+
+m -  margin
+p -  padding
+m - margin
+t - padding-top
+b - margin-bottom or padding-bottom
+s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL
+e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL
+x - for classes that set both *-left and *-right
+y - for classes that set both *-top and *-bottom
+
+blank - for classes that set a margin or padding on all 4 sides of the element
+Where size is one of:
+0 - for classes that eliminate the margin or padding by setting it to 0
+1 - (by default) for classes that set the margin or padding to $spacer * .25
+2 - (by default) for classes that set the margin or padding to $spacer * .5
+3 - (by default) for classes that set the margin or padding to $spacer
+4 - (by default) for classes that set the margin or padding to $spacer * 1.5
+5 - (by default) for classes that set the margin or padding to $spacer * 3
+auto - for classes that set the margin to auto
+(You can add more sizes by adding entries to the $spacers Sass map variable.)
+
+///택스트 박스 사이즈조절
+기본 mx-auto
+CSS에서 margin auto 속성값을 부트스트랩에서 활용한 것
+Bootstrap	CSS
+ml-auto	margin-left: auto;
+mr-auto	margin-right: auto;
+mt-auto	margin-top: auto;
+mb-auto	margin-bottom: auto
+mx-auto	left & right(x) margin : auto
+my-auto	top & bottom(y) maring: auto
+
+<div class="mx-auto mb-5 p-5" style="width: 400px;">auto test</div>
+
+*text-muted : 흐린 폰트
+<h3>
+  Fancy display heading
+  <small class="text-muted">With faded secondary text</small>
+</h3>
+
+*code : 레드
+<code>.themed-grid-col</code>
+///
+
+
+*/
+/* 브라우져 가로 1024픽셀 이하일경우 반응*/
+@media screen and (max-width: 1024px) {
+
+  /* about w */
+  #about_title01 {font-size:1.2rem;}
+  #about_title02 {font-size:3.5rem;}
+  #about_title03 {font-size:1.2rem;}
+}
+
+
+.mt-0 {
+    margin-top: 0 !important;
+  }
+  
+  .ms-1 {
+    margin-left: ($spacer * .25) !important;
+  }
+  
+  .px-2 {
+    padding-left: ($spacer * .5) !important;
+    padding-right: ($spacer * .5) !important;
+  }
+  
+  .p-3 {
+    padding: $spacer !important;
+  }
+
+  .dark-purple{
+    background-color: rgb(68, 5, 126);
+  }
